@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/top_buttons"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/reduce_button"
+        android:layout_width="0dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:onClick="reduceCount"
+        android:text="Reduce"></Button>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="@color/blue"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/white"
+        android:onClick="reset"
+        android:layout_toRightOf="@id/reduce_button"
+        android:text="Reset"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/middle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_buttons"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:layout_above="@id/count_button">
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/blue"
+            android:textSize="120sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/count_button"
+        android:layout_width="match_parent"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:onClick="increaseCount"
+        android:layout_alignParentBottom="true"
+        android:text="Count"></Button>
+
+</RelativeLayout>
